@@ -15,12 +15,28 @@
     }
   body {
     background-image: url("http://maxsportsnetwork.com/wp-content/uploads/2017/03/dazzling-ideas-metal-garage-door-1-project-garagejpg.jpg");
-  }
+    text-align: center;  
+}
+	#btnOn {
+		background-color: green;
+		color: black;
+		border: none;
+		padding: 20px 50px;
+		text-align: center;
+		display: inline-block;
+		font-size; 35px;
+		}
+	#btnOff {
+		background-color: red;
+		color: black;
+		border: none;
+		padding: 20px 50px;
+		text-align: center;
+		display: inline-block;
+		font-size; 35px;
+		}
+	
   </style>
-
-</head>
-
-<body>
 
 <div class="container-fluid">
 
@@ -29,12 +45,11 @@
         <div class="col-md-4"></div>
 
           <div class="col-md-4 text-center">
-          <div class="well well-small">
-            <h1>Mufuckin Garage Door</h1>
-          </div>
-            <p>BITCH.</p>
-            <button class="btn btn-success" type="button" onclick="document.getElementById('date').innerHTML = Date()">Fuck Me</button>
-            <p id="date"> </p>
+
+          	<div class="well well-small">
+
+            		<h1>Mufuckin Garage Door</h1>
+          	</div>           
 
           </div>
 
@@ -46,5 +61,25 @@
 
 </div>
 
+</head>
+
+<body>
+
+
+	<form action="/open/" method = "POST">
+		<p><input id="btnOn" type="submit" name="switch" value="Open"></p>
+	</form>
+
+	<form action="/close/" method = "POST">
+		<p><input id="btnOn" type="submit" name="switch" value="Close"></p>
+	</form>	
+
+	<form action="/stop/" method = "POST">
+		<p><input id="btnOff" type="submit" name="switchOff" value="Stop"></p>
+	</form>
+	
+	<form action="/off/" method = "POST">
+		<p><input id="btnOff" type="submit" name="switchstop" value="Off"></p>
+	</form>
 </body>
 </html>
